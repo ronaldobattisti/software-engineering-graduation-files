@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><!--Inside head it's not visible in the page-->
+    <meta charset="UTF-8"><!--metadata to specify the character type-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!--Dimensionate page and zoom it to 1x to fit in any device(device width)-->
+    <title>Dream trip</title>
+</head>
+
+<body>
+    <header>
+        <!-- nav is used to navigation menus -->
+        <nav class="navbar navbar-expand-lg bg-warning">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Dream Trip</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end bg-warning" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Taxes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contact
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>Come and make the trip of your dreams come true</h1>
+        <!--Used fot title, from h1 to h6, higher the h, lower the letter size-->
+    </header>
+    <section id="packages">
+        <h2>Know our packages</h2>
+        <p><!--Define a text block - a paragraph-->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula dolor. Vestibulum facilisis
+            condimentum lorem, in dignissim lorem porttitor et. Morbi sagittis pulvinar suscipit. Donec tincidunt
+            viverra
+            neque, non molestie dui tincidunt nec. Fusce eget imperdiet libero. Cras eget dolor eros. Integer rhoncus,
+            sem
+            congue laoreet maximus, sem sem molestie elit, at sagittis mi erat at ante. Praesent vitae lectus dictum,
+            viverra felis eget, sagittis lectus. Nulla gravida venenatis massa id efficitur. Nunc condimentum tempus
+            tincidunt. Suspendisse fringilla luctus ex, eget interdum sapien tempus sed. Ut tempus dapibus finibus.
+            <br><!--Break Line-->
+            <br>
+            <a href="https://www.lipsum.com/feed/html">Link</a>
+            <hr><!--Horizontal Rule-->
+        </p>
+        <div class="row">
+            <figure class="col text-center"><!--Let the browser know that the caption belongs to the figure-->
+                <img src="/Codes/Site/img/Tourism_1.jpg" alt="Tourism">
+                <!--Good alternative text to blind people, to reach searches, to explain the img-->
+                <figcaption>Thayland</figcaption><!--Caption to the figure-->
+            </figure>
+            <figure class="col text-center">
+                <img src="/Codes/Site/img/Tourism_2.jpg" alt="Cristo Redentor at Rio de Janeiro">
+                <figcaption>Rio de Janeiro</figcaption>
+            </figure>
+            <figure class="col text-center">
+                <img src="/Codes/Site/img/Tourism_3.jpg" alt="Girl at the beach">
+                <figcaption>Punta Cana</figcaption>
+            </figure>
+        </div>
+        <br>
+    </section>
+    <br>
+    <section>
+        <h2>Taxes and services</h2>
+        <p>Take a look to our services and taxes</p>
+        <table>
+            <caption>Services and taxes descriptions</caption>
+            <thead> <!-- Semantic tags don't change the view, but improove quality and search engines -->
+                <tr>
+                    <th>Services</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hotel Reservation</td>
+                    <td>$500.00</td>
+                </tr>
+                <tr>
+                    <td>Ticket Purchase</td>
+                    <td>$400.00</td>
+                </tr>
+                <tr>
+                    <td>Car Rent</td>
+                    <td>$50.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section>
+        <h2>Budget</h2>
+        <!-- GET method attach forms data into the URL while POST method attach inside the HTTP requisition -->
+        <!-- It means that GET method is better to simple requisition like search fiels and POST to passwords -->
+        <form method="GET" action="">
+            <fieldset>
+                <legend>Trip data</legend>
+                <label>Name</label><br>
+                <input type="text" name="name"><br><br>
+
+                <label>E-mail</label><br>
+                <input type="email" required name="E-mail"><br><br> <!--required make he field mandatory-->
+
+                <label>Departure Date</label><br>
+                <input type="date" name="departureDate"><br><br>
+
+                <label>Arrival Date</label><br>
+                <input type="date" name="arrivalDate"><br><br>
+
+                <label>Number of people</label><br>
+                <input type="number" name="personQuantity"><br><br>
+            </fieldset>
+
+            <!--
+                <label>Password</label><br>
+                <input type="password" name="password"><br><br>
+                -->
+
+            <fieldset>
+                <!--Legend instead of label to improove visualization-->
+                <legend>What services do you want?</legend>
+                <!-- We throw each checkbox inside a leble to be organized -->
+                <label>
+                    <input type="checkbox" name="passages" value="Passages">Passages Purchase<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="hosting" value="Hosting">Hosting Purchase<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="carRenting" value="Vehicle">Car Renting<br>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Method</legend>
+                <label>
+                    <input type="radio" name="paymentMethod" value="creditCard">Credit Card<br>
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="debitCard">Debit Card<br>
+                </label>
+                <label>
+                    <input type="radio" name="paymentMethod" value="pix">Pix
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choose payment deadline</legend>
+                <select name="paymentDeadline">
+                    <option value="inFull" selected>Payment in full</option>
+                    <option value="fiveTimes">Five interest-free installments</option>
+                    <option value="tenTimes">Ten times with interest</option>
+                </select>
+            </fieldset>
+
+            <label>Comment</label><br>
+            <textarea rows="5" name="Comments"></textarea><br><br>
+            <button>Save</button>
+        </form>
+
+    </section>
+
+
+    <footer>
+        <p>Developed by Ronaldo Battisti</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

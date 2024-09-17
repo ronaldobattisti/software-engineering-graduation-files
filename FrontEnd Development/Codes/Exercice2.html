@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Registration informations</legend>
+        <label>Name: </label>
+        <input type="text" name="name"><br><br>
+
+        <label>E-mail: </label>
+        <input type="email" name="email"><br><br>
+
+        <label>Services</label><br>
+        <label>
+            <input type="checkbox" name="ticketPurchase" value="TicketPurchase">Ticket Purchase<br>
+        </label>
+        <label>
+            <input type="checkbox" name="hostingReservation" value="HostingReservation">Hosting Reservation<br>
+        </label>
+        <label>
+            <input type="checkbox" name="vehicleRent" value="VehicleRent">Vehicle Rent
+        </label>
+    </fieldset>
+
+    <br><br>
+
+    <fieldset>
+        <legend>Payment</legend>
+        <label>Payment method</label><br>
+        <input type="radio" name="paymentMethod" value="CreditCard">Credit Card
+        <input type="radio" name="paymentMethod" value="BankSlip">Bank Slip
+        <input type="radio" name="paymentMethod" value="Pix">Pix
+
+        <br><br>
+
+        <label>Payment deadline</label><br>
+        <select name="paymentDeadline">
+            <option value="inFull" selected>Payment in full</option>
+            <option value="fiveTimes">Five interest-free installments</option>
+            <option value="tenTimes">Ten times with interest</option>
+        </select>
+    </fieldset>
+
+    <br><br>
+
+    <button>Submit</button>
+</body>
+
+</html>
