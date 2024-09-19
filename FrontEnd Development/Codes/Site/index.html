@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="container-fluid p-2 bg-warning text-center">
         <!-- nav is used to navigation menus -->
         <nav class="navbar navbar-expand-lg bg-warning">
             <div class="container-fluid">
@@ -51,7 +51,7 @@
         <h1>Come and make the trip of your dreams come true</h1>
         <!--Used fot title, from h1 to h6, higher the h, lower the letter size-->
     </header>
-    <section id="packages">
+    <section class="container-fluid bg-light text-center p-2">
         <h2>Know our packages</h2>
         <p><!--Define a text block - a paragraph-->
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae vehicula dolor. Vestibulum facilisis
@@ -85,18 +85,19 @@
         <br>
     </section>
     <br>
-    <section>
+    <section class="container-fluid bg-warning text-xl-center p-2">
         <h2>Taxes and services</h2>
         <p>Take a look to our services and taxes</p>
-        <table>
+        <table class="table table-warning table-striped table-hover table-bordered border-warning">
             <caption>Services and taxes descriptions</caption>
-            <thead> <!-- Semantic tags don't change the view, but improove quality and search engines -->
+            <thead class="table-secondary">
+                <!-- Semantic tags don't change the view, but improove quality and search engines -->
                 <tr>
                     <th>Services</th>
                     <th>Value</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
                 <tr>
                     <td>Hotel Reservation</td>
                     <td>$500.00</td>
@@ -114,80 +115,81 @@
     </section>
 
 
-    <section>
-        <h2>Budget</h2>
+    <section class="container-fluid bg-light p-2">
+        <h2 class="text-center">Contact</h2>
         <!-- GET method attach forms data into the URL while POST method attach inside the HTTP requisition -->
         <!-- It means that GET method is better to simple requisition like search fiels and POST to passwords -->
         <form method="GET" action="">
             <fieldset>
                 <legend>Trip data</legend>
-                <label>Name</label><br>
-                <input type="text" name="name"><br><br>
 
-                <label>E-mail</label><br>
-                <input type="email" required name="E-mail"><br><br> <!--required make he field mandatory-->
+                <div class="mb-3">
+                    <label class="form-label" for="name">
+                        Name
+                    </label>
+                    <input type="text" class="form-control" name="name" id="name"><br><br>
+                </div>
 
-                <label>Departure Date</label><br>
-                <input type="date" name="departureDate"><br><br>
+                <div class="mb-3">
+                    <label class="form-label" for="email">
+                        E-mail
+                    </label>
+                </div>
+                <input type="email" class="form-control" required name="E-mail" placeholder="email@xyz.com"><br><br>
+                <!--required make he field mandatory-->
 
-                <label>Arrival Date</label><br>
-                <input type="date" name="arrivalDate"><br><br>
+                <div class="mb-3">
+                    <label class="form-label" for="depDate">
+                        Departure Date
+                    </label>
+                </div>
+                <input type="date" class="form-control" id="depDate" name="depDate"><br><br>
 
-                <label>Number of people</label><br>
-                <input type="number" name="personQuantity"><br><br>
+                <div class="mb-3">
+                    <label class="form-label" for="arrDate">
+                        Arrival Date
+                    </label>
+                </div>
+                <input type="date" class="form-control" id="arrDate" name="arrDate"><br><br>
+
             </fieldset>
 
-            <!--
-                <label>Password</label><br>
-                <input type="password" name="password"><br><br>
-                -->
-
             <fieldset>
-                <!--Legend instead of label to improove visualization-->
                 <legend>What services do you want?</legend>
-                <!-- We throw each checkbox inside a leble to be organized -->
-                <label>
-                    <input type="checkbox" name="passages" value="Passages">Passages Purchase<br>
-                </label>
-                <label>
-                    <input type="checkbox" name="hosting" value="Hosting">Hosting Purchase<br>
-                </label>
-                <label>
-                    <input type="checkbox" name="carRenting" value="Vehicle">Car Renting<br>
-                </label>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="passages" value="Passages"
+                        id="passagesPurchase">
+                    <label class="form-check-label" for="passagesPurchase">
+                        Passages Purchase
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="hosting" value="Hosting" id="hosting">
+                    <label class="form-check-label" for="hosting">
+                        Hosting Purchase
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="carRenting" value="Vehicle" id="carRenting">
+                    <label class="form-check-label" for="carRenting">
+                        Car Renting
+                    </label>
+                </div>
             </fieldset>
 
-            <fieldset>
-                <legend>Payment Method</legend>
-                <label>
-                    <input type="radio" name="paymentMethod" value="creditCard">Credit Card<br>
-                </label>
-                <label>
-                    <input type="radio" name="paymentMethod" value="debitCard">Debit Card<br>
-                </label>
-                <label>
-                    <input type="radio" name="paymentMethod" value="pix">Pix
-                </label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Choose payment deadline</legend>
-                <select name="paymentDeadline">
-                    <option value="inFull" selected>Payment in full</option>
-                    <option value="fiveTimes">Five interest-free installments</option>
-                    <option value="tenTimes">Ten times with interest</option>
-                </select>
-            </fieldset>
-
-            <label>Comment</label><br>
-            <textarea rows="5" name="Comments"></textarea><br><br>
-            <button>Save</button>
+            <button class="btn btn-secondary">
+                Save
+            </button>
+            <br>
         </form>
 
     </section>
 
 
-    <footer>
+    <footer class="container-fluid bg-warning text-center">
         <p>Developed by Ronaldo Battisti</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
