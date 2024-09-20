@@ -1,0 +1,10 @@
+.brand-text {
+    font-size: 2.5rem;
+    /* Increase the font size for the brand */
+    font-weight: bold;
+    /* Make it bold */
+}
+
+footer {
+    min-height: 100px;
+}
