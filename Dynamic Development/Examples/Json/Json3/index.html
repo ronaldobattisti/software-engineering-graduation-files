@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Using https://fakestoreapi.com/products?limit=10 </h1>
+    <div id="cart-container"></div>
+</body>
+
+<script>
+    fetch('https://fakestoreapi.com/products?limit=10')
+        .then(response => response.json())
+        .then(data => {
+            fillCart(data);
+        })
+        .catch(error => {
+            console.log('An error has occured: ' + error);
+        })
+
+    function fillCart(data) {
+        const cartContainer = document.getElementById('cart-container');
+        data.forEach(element => {
+            const divProduct = document.createElement('div');
+            divProduct.classList.add('product');
+
+            const image = document.createElement('img');
+            image.src = element.image;
+            image.width = 200;
+            image.height = 300;
+
+            divProduct.appendChild(image);
+
+            const name = document.createElement('p');
+            name.textContent = element.title;
+
+            divProduct.appendChild(name);
+
+            const price = document.createElement('p');
+            price.textContent = `$${element.price}`;
+            divProduct.appendChild(price);
+
+            cartContainer.append(divProduct);
+        });
+    }
+</script>
+
+</html>
