@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 7</title>
+    <script>
+        function eventExample() {
+            alert("Showing alert");
+        }
+
+        function mouseOver() {
+            document.getElementById("example").innerHTML = "Event with mouse over";
+        }
+
+        function mouseOut() {
+            document.getElementById("example").innerHTML = "Event with mouse out";
+        }
+    </script>
+</head>
+
+<body>
+    <p>Clink in the button and see what happens</p>
+    <form>
+        <input type="button" onclick="eventExample()" value="Show" />
+    </form>
+
+    <h1 id="example" onmouseover="mouseOver()" onmouseout="mouseOut()">Change Text</h1>
+</body>
+
+</html>

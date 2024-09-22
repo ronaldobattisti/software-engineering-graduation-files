@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+</head>
+
+<body>
+    <button onclick="deleteConfirm()">Delete</button>
+</body>
+
+<script>
+    function deleteConfirm() {
+        let confirmation = confirm("You really want to delete?");
+        if (confirmation) {
+            alert("You deleted the item");
+        } else alert("Action canceled");
+    }
+</script>
+
+</html>

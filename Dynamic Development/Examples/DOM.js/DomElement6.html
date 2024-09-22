@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>Products</li>
+
+    </ul>
+
+    <ul class="teamList">
+    </ul>
+
+</body>
+<script>
+    var element1 = document.createElement("div");
+    element1.innerText = "Text included in the div";
+    element1.style.backgroundColor = "lightgreen";
+    document.body.append(element1);
+
+    var list = document.getElementById("list")
+    var li = document.createElement("li");
+    li.textContent = "Who we are?";
+    list.appendChild(li);
+
+    var teams = ["Inter", "Juventude", "Grêmio", "Bilbao"];
+    var teamList = document.querySelector('ul.teamList');
+
+    /*teams.forEach(element => {
+        var listItem = document.createElement('li');
+        listItem.innerText = element;
+        teamList.appendChild(listItem);
+    });*/
+    for (var i = 0; i < teams.length; i++) {
+        var team = teams[i];
+        var listItem = document.createElement('li');
+        listItem.innerText = team;
+        listItem.style.border = '1px solid blue';
+        teamList.appendChild(listItem);
+    }
+
+</script>
+
+</html>

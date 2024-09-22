@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="style">
+        Div with style
+    </div>
+    <div class="style">
+        Div with style 2
+    </div>
+    <p class="style">Element with style</p>
+    <p>This is a <span class="style">Element span</span> inside a p</p>
+
+</body>
+
+<script>
+    const styleList = document.querySelectorAll(".style")
+    styleList.forEach(function (item) {
+        item.style.backgroundColor = "blue";
+        item.style.color = "white";
+        item.innerText = item.innerText.toUpperCase();
+    })
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 7</title>
+</head>
+
+<body>
+    <form name="register" onsubmit="validateForm()">
+        <label>Email</label>
+        <input type="email" id="email" />
+
+        <label>Name</label>
+        <input type="text" id="name" />
+
+        <!--<button type="submit" onclick="newItem()">Register1</button>-->
+        <button type="submit">Register2</button>
+    </form>
+</body>
+<script>
+    /*function newItem() {
+        var name = document.getElementById("name");
+        alert("Your name is:  " + name.value);
+    }*/
+
+    function validateForm() {
+        var pName = document.forms["register"]["name"].value;
+        if (pName == "") {
+            alert("Please insert your name!");
+            event.preventDefault();
+        } else {
+            alert("Hello, " + pName);
+            event.preventDefault;
+        }
+    }
+
+
+</script>
+
+</html>

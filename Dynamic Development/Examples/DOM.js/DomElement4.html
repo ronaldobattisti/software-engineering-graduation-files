@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+
+<body>
+    <h1>Using DOM selector</h1>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+
+    <div id="content" name="divContent" class="message">
+    </div>
+
+    <div name="divContent" class="message">
+    </div>
+
+    <div name="divContent" class="message">
+    </div>
+
+    <span id="newspan" class="new">
+        text span
+    </span>
+
+    <div class="message">
+
+    </div>
+
+    <script>
+        element0 = document.getElementsByTagName('li')[0];
+        element0.style.color = 'Blue';
+
+        element1 = document.getElementsByTagName('li')[1];
+        element1.style.background = 'Red';
+
+        element2 = document.getElementsByTagName('li')[2];
+        element2.innerText = 'C#';
+
+        divElement1 = document.getElementById("content");
+        divElement1.innerHTML = "<p>I inserted p tag on div</p>";
+
+        divElement2 = document.getElementsByName("divContent")[1];
+        divElement2.style.color = "Blue";
+        divElement2.innerText = "That's a text inside now"
+
+        divElement3 = document.getElementsByClassName("message")[2];
+        divElement3.innerHTML = "<p>I inserted p tag on div</p>";
+
+        spanClassElement = document.querySelector("span.new");
+        spanClassElement.style.color = "yellow";
+
+        selectorElement = document.querySelectorAll(".message")[3];
+        selectorElement.innerHTML = "<p> Included text</p>";
+    </script>
+
+</html>
