@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fines System</h1>
+    Car's Velocuty: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verify" onclick="calculate()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calculate(){
+            var txtvel = window.document.getElementById('txtvel');
+            var res = window.document.querySelector('div#res');//#for id and . for class
+            var vel = Number(txtvel.value);
+
+            res.innerHTML = `Your velocity is ${vel} km/h`
+            
+        }
+    </script>
+</body>
+</html>
