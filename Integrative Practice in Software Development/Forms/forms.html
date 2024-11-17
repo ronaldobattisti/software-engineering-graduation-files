@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Products Stock</h2>
+    <table style="border: 2px solid; padding: 10px">
+        <thead>
+            <th style="background-color: red;">Product code</th>
+            <th>Product Description</th>
+            <th>Proce (R$)</th>
+            <th>Quantity</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PROD0001</td>
+                <td>Basic T-shirt</td>
+                <td>80.00</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>PROD0002</td>
+                <td>Jeans pants</td>
+                <td>150.00</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>PROD0003</td>
+                <td>Runners</td>
+                <td>400.00</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>PROD0004</td>
+                <td>Scholar Backpack</td>
+                <td>120.00</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="\register_stock" method="post">
+        <fieldset>
+            <legend>Product Registration</legend>
+            <table>
+                <tr>
+                    <td><label for="cd_prod">Prodict code: </label></td>
+                    <td><input type="text" id="cd_prod" name="CD_PROD" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="desc_prod">Product description: </label></td>
+                    <td><textarea id="desc_prod" name="desc_prod" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price: </label></td>
+                    <td><input type="number" id="price" name="price" step="0.01" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">Quantity in stock: </label></td>
+                    <td><input type="number" id="quantity" name="quantity" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="products">Category: </label></td>
+                    <td>
+                        <select id="products">
+                            <option value="shirt">Shirt</option>
+                            <option value="runners" selected>Runners</option>
+                            <option value="bag">Bag</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="update_date">Regstration date: </label></td>
+                    <td><input type="date" id="update_date" name="update_date" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="reset" value="Clear content">
+                        <input type="submit" value="Register">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
