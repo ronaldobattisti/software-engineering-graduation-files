@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*Part 1*/
+    let name = "Ronaldo"
+    let surname = "Battisti"
+
+    function completeName(name, surname) {
+        if (name.length > 0 && surname.length > 0) {
+            return ("Your name is " + name + " " + surname);
+        } else {
+            console.log("You have to input both name and surname")
+        }
+    }
+
+    console.log(completeName(name, surname));
+
+    name = "";
+    surname = "";
+
+    console.log(completeName(name, surname));
+
+</script>
+
+</html>
