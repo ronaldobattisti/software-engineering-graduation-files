@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        fieldset {
+            max-width: 600px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        fieldset table {
+            width: 100%;
+            border: none;
+        }
+
+        fieldset table td {
+            padding: 8px;
+            border: none;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 30%;
+            /*of the father element*/
+            transition-property: width;
+            transition-duration: 0.5s;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+        }
+
+        input[type="reset"] {
+            background-color: #df0026;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            width: 40%;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #b80e22;
+            width: 40%;
+        }
+
+        body>table {
+            font-family: sans-serif;
+            border: 2px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Products Stock</h2>
+    <table id="product_table">
+        <thead>
+            <th>Product code</th>
+            <th>Product Description</th>
+            <th>Proce (R$)</th>
+            <th>Quantity</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PROD0001</td>
+                <td>Basic T-shirt</td>
+                <td>80.00</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>PROD0002</td>
+                <td>Jeans pants</td>
+                <td>150.00</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>PROD0003</td>
+                <td>Runners</td>
+                <td>400.00</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>PROD0004</td>
+                <td>Scholar Backpack</td>
+                <td>120.00</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="\register_stock" method="post">
+        <fieldset>
+            <legend>Product Registration</legend>
+            <table class="product_form">
+                <tr>
+                    <td><label for="cd_prod">Prodict code: </label></td>
+                    <td><input type="text" id="cd_prod" name="CD_PROD" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="desc_prod">Product description: </label></td>
+                    <td><textarea id="desc_prod" name="desc_prod" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price: </label></td>
+                    <td><input type="number" id="price" name="price" step="0.01" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">Quantity in stock: </label></td>
+                    <td><input type="number" id="quantity" name="quantity" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="products">Category: </label></td>
+                    <td>
+                        <select id="products">
+                            <option value="shirt">Shirt</option>
+                            <option value="runners" selected>Runners</option>
+                            <option value="bag">Bag</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="update_date">Regstration date: </label></td>
+                    <td><input type="date" id="update_date" name="update_date" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="reset" value="Clear content">
+                        <input type="submit" value="Register">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+<script>
+    let newLine = document.createElement("tr");
+
+    let newCell1 = document.createElement("td");
+    newCell1.innerText = "Cell text 1";
+    let newCell2 = document.createElement("td");
+    newCell2.innerText = "Cell text 2";
+
+    newLine.appendChild(newCell1);
+    newLine.appendChild(newCell2);
+
+    let table = document.getElementById("product_table");
+    table.appendChild(newLine);
+
+</script>
+
+</html>

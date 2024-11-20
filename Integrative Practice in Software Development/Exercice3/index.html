@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <table id="registers" class="table">
+        <thead>
+            <th>Name</th>
+            <th>Born Date</th>
+            <th>E-mail</th>
+            <th>Adress</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ronaldo Battisti</td>
+                <td>02/12/1996</td>
+                <td>ronaldo.battisti@hotmail.com</td>
+                <td>Farroupilha-RS</td>
+            </tr>
+        </tbody>
+    </table>
+    <form id="registerField" class="form-control form-label">
+        <fieldset>
+            <legend>Person register</legend>
+            <table>
+                <tr>
+                    <td><label for="name">What is your name? </label></td>
+                    <td><input type="text" name="name" id="name" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="surname">And what is your surname? </label></td>
+                    <td><input type="text" name="surname" id="surname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="bDate">Wher you were born? </label></td>
+                    <td><input type="date" name="bDate" id="bDate" /></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Input your e-mail: </label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="adress">Where are you from? </label></td>
+                    <td><input type="text" name="adress" id="adress"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="clear" class="btn btn-secondary">Clear</button>
+                        <button id="submit" class="btn btn-primary">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+<script>
+    document.getElementById('clear').addEventListener('click', function () {
+        document.getElementById('registerField').reset();
+    })
+
+    document.getElementById('submit').addEventListener('click', function () {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const surname = document.getElementById('surname').value;
+        const bDate = document.getElementById('bDate').value;
+        const email = document.getElementById('email').value;
+        const adress = document.getElementById('adress').value;
+
+        const regTable = document.getElementById('registers').getElementsByTagName('tbody')[0];
+        const newLine = regTable.insertRow();
+
+        newLine.insertCell(0).textContent = name + " " + surname;
+        newLine.insertCell(1).textContent = bDate;
+        newLine.insertCell(2).textContent = email;
+        newLine.insertCell(3).textContent = adress;
+    })
+</script>
+
+</html>
